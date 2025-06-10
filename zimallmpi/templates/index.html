@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Pill Dispenser - Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row g-4">
+        <!-- Sidebar - User Profile -->
+        <div class="col-md-3">
+            <!-- User Profile - Keep as is -->
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-header bg-dark text-white rounded-top-4">
+                    <h3><i class="bi bi-person-circle me-2"></i>User Profile</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <div class="user-avatar mb-3 rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto">
+                            <i class="bi bi-person" style="font-size: 3rem;"></i>
+                        </div>
+                        <h4>{{ user_data.get('personal', {}).get('name', 'Select a User') }}</h4>
+                    </div>
+
+                    <form id="userSelectForm">
+                        <div class="mb-3">
+                            <label for="userSelect" class="form-label">Switch User</label>
+                            <select class="form-select" id="userSelect" name="user_id" onchange="selectUser(this.value)">
+                                <option value="">Select User</option>
+                                {% for user in user_options %}
+                                    <option value="{{ user.id }}" {% if user.id==current_user %}selected{% endif %}>
+                                        {{ user.name }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="d-grid mt-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="showAddUserModal()">
+                            <i class="bi bi-person-plus me-1"></i>Add New User
+                        </button>
+                    </div>
+
+                    {% if current_user %}
+                        <div class="user-info mt-4">
+                            <div class="info-item d-flex align-items-center mb-2">
+                                <div class="info-icon me-2 rounded-circle bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-calendar2"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted">Age</small>
+                                    <p class="mb-0">{{ user_data.get('personal', {}).get('age', 'Unknown') }}</p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-center mb-2">
+                                <div class="info-icon me-2 rounded-circle bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-gender-ambiguous"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted">Gender</small>
+                                    <p class="mb-0">{{ user_data.get('personal', {}).get('gender', 'Unknown') }}</p>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <h5><i class="bi bi-clipboard-pulse me-2"></i>Medical Information</h5>
+                            <div class="mt-3">
+                                <small class="text-muted d-block mb-1">Medical Conditions</small>
+                                {% set conditions = user_data.get('medical_history', {}).get('conditions', []) %}
+                                {% if conditions %}
+                                    <div class="d-flex flex-wrap gap-1 mb-3">
+                                        {% for condition in conditions %}
+                                            <span class="badge bg-light text-dark">{{ condition }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <p class="text-muted mb-3">None reported</p>
+                                {% endif %}
+
+                                <small class="text-muted d-block mb-1">Allergies</small>
+                                {% set allergies = user_data.get('medical_history', {}).get('allergies', []) %}
+                                {% if allergies %}
+                                    <div class="d-flex flex-wrap gap-1">
+                                        {% for allergy in allergies %}
+                                            <span class="badge bg-danger">{{ allergy }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <p class="text-muted">None reported</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="mt-4">
+                        <button type="button" id="emergencyBtn" class="btn btn-danger w-100">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>EMERGENCY
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content area - now 9 columns -->
+        <div class="col-md-9">
+            <!-- MOVED: Pill Detection, Assistant and Reminders to the top -->
+            <div class="row g-4 mb-4">
+                <!-- Pill Pickup Detection - Now smaller -->
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-header bg-info text-white rounded-top-4">
+                            <h3><i class="bi bi-hand-index-thumb me-2"></i>Pickup Detection</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sensor-visual mb-3 text-center">
+                                <div id="distanceVisual" class="rounded-circle mx-auto position-relative" style="width:100px;height:100px;border:8px solid #e9ecef;transition:all 0.3s ease;">
+                                    <span id="distanceValue" class="position-absolute top-50 start-50 translate-middle fs-4 fw-bold">--</span>
+                                </div>
+                                <p class="text-muted mt-2">Distance in cm</p>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-info text-white" onclick="checkPillPickup()">
+                                    <i class="bi bi-arrow-repeat me-2"></i>Check Status
+                                </button>
+                            </div>
+                            <div class="alert mt-3" id="pillPickupAlert" role="alert">
+                                Place your hand near the sensor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Assistant - Now bigger -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-header bg-success text-white rounded-top-4">
+                            <h3><i class="bi bi-chat-dots me-2"></i>Assistant</h3>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="chat-container flex-grow-1 mb-3" id="chatContainer" style="height: 350px;">
+                                {% for message in chat_history %}
+                                    <div class="chat-message {{ message.type }} rounded p-2 mb-2">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <strong>{{ message.sender }}</strong>
+                                            <small class="text-muted ms-auto">{{ message.timestamp }}</small>
+                                        </div>
+                                        <div class="message-content">
+                                            {{ message.message|safe }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                {% if not chat_history %}
+                                    <div class="text-center text-muted py-5">
+                                        <i class="bi bi-chat text-muted mb-3" style="font-size: 2rem;"></i>
+                                        <p>No messages yet. Ask me anything about your medications!</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <form id="messageForm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="userInput" placeholder="How can I help you?..." required>
+                                    <button type="submit" class="btn btn-success">Send</button>
+                                    <button type="button" id="voiceButton" class="btn btn-outline-success">
+                                        <i class="bi bi-mic"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reminders & Schedule - Now in the right column -->
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-header bg-warning text-dark rounded-top-4">
+                            <h3><i class="bi bi-alarm me-2"></i>Reminders</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="upcoming-reminder p-3 bg-light rounded-3 mb-3">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <h5>Next Dose</h5>
+                                    <span class="badge bg-warning text-dark">Soon</span>
+                                </div>
+                                <p class="mb-1">Paracetamol - 500mg</p>
+                                <p class="text-muted"><i class="bi bi-clock me-1"></i>Today, 8:00 PM</p>
+                                <div class="d-grid">
+                                    <button class="btn btn-sm btn-outline-warning">Remind Me</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <h5>Today's Schedule</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <p class="mb-0">Antibiotic 250mg</p>
+                                            <small class="text-muted">8:00 AM</small>
+                                        </div>
+                                        <span class="badge bg-success rounded-pill">Taken</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <p class="mb-0">Paracetamol 500mg</p>
+                                            <small class="text-muted">8:00 PM</small>
+                                        </div>
+                                        <span class="badge bg-secondary rounded-pill">Upcoming</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MOVED DOWN: Medication Overview -->
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-header bg-primary text-white rounded-top-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3><i class="bi bi-capsule me-2"></i>Medication Overview</h3>
+                        <span class="badge bg-light text-primary">Today</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% if current_user %}
+                            {% for slot in [1, 2] %}
+                                <div class="col-md-6 mb-3">
+                                    {% set med = None %}
+                                    {% for m in user_data.get('medications', []) %}
+                                        {% if m.get('slot') == slot %}
+                                            {% set med = m %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    <div class="medication-card p-3 rounded-3 {% if not med %}border-dashed{% endif %}">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h4 class="mb-0">Slot {{ slot }}</h4>
+                                            {% if med %}
+                                                <span class="badge bg-success">Active</span>
+                                            {% else %}
+                                                <span class="badge bg-secondary">Empty</span>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        {% if med %}
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="medication-icon me-3 rounded-circle bg-light text-primary d-flex align-items-center justify-content-center">
+                                                    <i class="bi bi-pill"></i>
+                                                </div>
+                                                <div>
+                                                    <h5 class="mb-0">{{ med.get('name', 'Unknown') }}</h5>
+                                                    <small class="text-muted">{{ med.get('dosage', 'Unknown') }} - {{ med.get('schedule', 'As needed') }}</small>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-3" style="height: 10px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button class="btn btn-primary" onclick="dispensePill({{ slot }})">
+                                                    <i class="bi bi-box-arrow-down me-2"></i>Dispense Now
+                                                </button>
+                                            </div>
+                                        {% else %}
+                                            <div class="text-center py-4">
+                                                <i class="bi bi-plus-circle text-muted" style="font-size: 2rem;"></i>
+                                                <p class="text-muted mt-2">No medication assigned</p>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="col-12 text-center py-5">
+                                <i class="bi bi-person-x text-muted" style="font-size: 3rem;"></i>
+                                <p class="mt-3">Please select a user profile to view medications</p>
+                                <button class="btn btn-outline-primary mt-2" onclick="document.getElementById('userSelect').focus()">
+                                    Select User
+                                </button>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Update the CSS for the chat container to be taller
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+        .medication-icon, .info-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+        }
+        .border-dashed {
+            border: 2px dashed #dee2e6;
+        }
+        .chat-container {
+            height: 350px !important;
+            overflow-y: auto;
+        }
+        .typing-indicator {
+            display: inline-block;
+        }
+        .typing-indicator span {
+            animation: typingDot 1.4s infinite;
+            display: inline-block;
+            opacity: 0;
+        }
+        .typing-indicator span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typingDot {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    `;
+    document.head.appendChild(styleElement);
+    
+    // Include Bootstrap Icons
+    document.head.innerHTML += '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">';
+
+    // Configuration
+    const IS_RASPBERRY_PI = window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1";
+    const API_PREFIX = IS_RASPBERRY_PI ? "" : "/api";  // Prefix for API calls
+    
+    // Helper function for API calls
+    async function callApi(endpoint, method = "GET", data = null) {
+        try {
+            const url = `${API_PREFIX}${endpoint}`;
+            const options = {
+                method: method,
+                headers: { 'Content-Type': 'application/json' }
+            };
+            
+            if (data && (method === "POST" || method === "PUT")) {
+                options.body = JSON.stringify(data);
+            }
+            
+            const response = await fetch(url, options);
+            return await response.json();
+        } catch (error) {
+            console.error(`API call to ${endpoint} failed:`, error);
+            showToast(`Network error: ${error.message}`, 'danger');
+            return { success: false, error: error.message };
+        }
+    }
+
+    // Medication-specific functions
+    async function getMedicationInfo(slot) {
+        const response = await callApi(`/get_medication_info/${slot}`);
+        if (response.error) {
+            // Fallback medication data
+            if (slot === 1) {
+                return {
+                    name: "Paracetamol",
+                    dosage: "500mg",
+                    schedule: "As needed",
+                    description: "Use for pain or fever. Do not exceed 8 tablets in 24 hours.",
+                    icon: "bi-capsule"
+                };
+            } else if (slot === 2) {
+                return {
+                    name: "Antibiotic",
+                    dosage: "250mg",
+                    schedule: "Every 8 hours",
+                    description: "Take with food. Complete the full course of treatment.",
+                    icon: "bi-pill"
+                };
+            }
+        }
+        return response;
+    }
+
+    async function dispensePill(slot) {
+        const medInfo = await getMedicationInfo(slot);
+        
+        // Show dispensing animation
+        showToast(`Dispensing ${medInfo.name}...`, 'info');
+        
+        const response = await callApi(`/dispense/${slot}`, "POST");
+        
+        // Show completion toast
+        setTimeout(() => {
+            showToast(`${medInfo.name} dispensed. ${medInfo.description}`, 'success');
+        }, 1500);
+        
+        // Update UI to show pill needs to be picked up
+        document.getElementById('pillPickupAlert').className = 'alert alert-info mt-3';
+        document.getElementById('pillPickupAlert').innerHTML = 
+            `<i class="bi bi-hand-index-thumb me-2"></i>Please pick up your ${medInfo.name}`;
+    }
+
+    async function checkPillPickup() {
+        const response = await callApi('/check_pill_pickup');
+        
+        // Update distance visual
+        const distance = response.distance_cm;
+        document.getElementById('distanceValue').innerText = distance;
+        
+        // Update visual feedback based on distance
+        const visual = document.getElementById('distanceVisual');
+        const alert = document.getElementById('pillPickupAlert');
+        
+        if (distance < 10) {
+            visual.style.borderColor = '#198754'; // Green
+            alert.className = 'alert alert-success mt-3';
+            alert.innerHTML = '<i class="bi bi-check-circle me-2"></i>Pill pickup detected!';
+            
+            // Add to the chat history
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.innerHTML += `
+                <div class="chat-message system rounded p-2 mb-2">
+                    <div class="d-flex align-items-center mb-1">
+                        <strong>System</strong>
+                        <small class="text-muted ms-auto">${new Date().toLocaleTimeString()}</small>
+                    </div>
+                    <div class="message-content">
+                        Pill pickup confirmed. Remember to take medication with water.
+                    </div>
+                </div>
+            `;
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        } else {
+            visual.style.borderColor = '#dc3545'; // Red
+            alert.className = 'alert alert-warning mt-3';
+            alert.innerHTML = '<i class="bi bi-exclamation-triangle me-2"></i>No pill pickup detected.';
+        }
+    }
+
+    // The rest of your JavaScript remains unchanged
+</script>
+{% endblock %}

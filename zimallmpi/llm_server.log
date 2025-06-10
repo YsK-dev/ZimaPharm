@@ -1,0 +1,987 @@
+2025-06-08 23:38:06,241 - __main__ - INFO - ==================================================
+2025-06-08 23:38:06,242 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-08 23:38:06,242 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-08 23:38:06,242 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-08 23:38:06,242 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-08 23:38:06,242 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-08 23:38:06,242 - __main__ - INFO - ==================================================
+2025-06-08 23:38:06,292 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-08 23:38:06,301 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-08 23:38:06,301 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 23:38:56,064 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:38:56] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:38:56,111 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-08 23:38:56,112 - __main__ - INFO - Total registered clients: 1
+2025-06-08 23:38:56,112 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:38:56] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-08 23:38:56,165 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:38:56] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:38:56,165 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:38:56] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-08 23:39:26,362 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:39:26] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:39:56,583 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:39:56] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:40:02,805 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:40:02] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:40:26,614 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:40:26] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:40:56,648 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:40:56] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:41:26,680 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:26] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:41:45,881 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:41:45,902 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-08 23:41:45,902 - __main__ - INFO - Total registered clients: 1
+2025-06-08 23:41:45,903 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:45] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-08 23:41:45,921 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:41:45,927 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:45] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-08 23:41:54,156 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:41:54] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:42:15,479 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:42:15] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:42:15,953 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:42:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:42:45,982 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:42:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:42:47,180 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:42:47] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:43:16,076 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:43:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:43:44,664 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:43:44] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:43:46,101 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:43:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:44:16,129 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:44:39,729 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:39] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:44:40,967 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:40] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:44:41,528 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:41] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:44:41,695 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:41] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:44:41,893 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:41] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:44:46,198 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:44:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:45:16,231 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:45:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:45:46,256 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:45:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:46:16,278 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:46:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:46:46,307 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:46:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:47:16,333 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:47:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:47:46,359 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:47:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:48:16,637 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:48:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:48:46,659 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:48:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:49:16,728 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:49:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:49:46,834 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:49:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:50:16,942 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:50:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:50:27,690 - __main__ - INFO - ==================================================
+2025-06-08 23:50:27,690 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-08 23:50:27,690 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-08 23:50:27,690 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-08 23:50:27,690 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-08 23:50:27,690 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-08 23:50:27,690 - __main__ - INFO - ==================================================
+2025-06-08 23:50:27,726 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-08 23:50:27,734 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-08 23:50:27,734 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 23:50:47,048 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:50:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:51:17,122 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:51:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:51:47,139 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:51:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:52:17,165 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:52:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:52:47,265 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:52:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:53:10,883 - __main__ - INFO - ==================================================
+2025-06-08 23:53:10,883 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-08 23:53:10,883 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-08 23:53:10,883 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-08 23:53:10,883 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-08 23:53:10,883 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-08 23:53:10,883 - __main__ - INFO - ==================================================
+2025-06-08 23:53:10,894 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-08 23:53:10,899 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-08 23:53:10,899 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 23:53:17,290 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:53:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:53:47,425 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:53:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:54:03,998 - __main__ - INFO - ==================================================
+2025-06-08 23:54:03,998 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-08 23:54:03,998 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-08 23:54:03,998 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-08 23:54:03,998 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-08 23:54:03,998 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-08 23:54:03,998 - __main__ - INFO - ==================================================
+2025-06-08 23:54:04,007 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-08 23:54:04,012 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-08 23:54:04,012 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 23:54:17,448 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:54:25,492 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:54:25,510 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-08 23:54:25,510 - __main__ - INFO - Total registered clients: 1
+2025-06-08 23:54:25,511 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:25] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-08 23:54:25,531 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:54:25,537 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:25] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-08 23:54:37,723 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:37] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:54:55,755 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:54:55] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:55:25,781 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:55:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:55:55,804 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:55:55] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:56:25,829 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:56:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:56:55,858 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:56:55] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:57:25,881 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:57:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:57:55,915 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:57:55] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:58:25,939 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:58:25] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:58:55,968 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:58:55] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:59:08,474 - __main__ - INFO - ==================================================
+2025-06-08 23:59:08,474 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-08 23:59:08,474 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-08 23:59:08,474 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-08 23:59:08,474 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-08 23:59:08,474 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-08 23:59:08,474 - __main__ - INFO - ==================================================
+2025-06-08 23:59:08,486 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-08 23:59:08,491 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-08 23:59:08,491 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 23:59:16,656 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:59:16,677 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-08 23:59:16,678 - __main__ - INFO - Total registered clients: 1
+2025-06-08 23:59:16,678 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:16] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-08 23:59:16,697 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-08 23:59:16,703 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:16] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-08 23:59:28,709 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:28] "GET /api/users HTTP/1.1" 200 -
+2025-06-08 23:59:46,727 - werkzeug - INFO - 192.168.1.107 - - [08/Jun/2025 23:59:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:00:16,766 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:00:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:00:46,804 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:00:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:01:16,915 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:01:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:01:28,737 - __main__ - INFO - ==================================================
+2025-06-09 00:01:28,737 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:01:28,737 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:01:28,738 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:01:28,738 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:01:28,738 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:01:28,738 - __main__ - INFO - ==================================================
+2025-06-09 00:01:28,747 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:01:28,753 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:01:28,753 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:01:46,194 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:01:46] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:01:46,943 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:01:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:02:17,133 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:02:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:02:47,156 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:02:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:02:51,872 - __main__ - INFO - ==================================================
+2025-06-09 00:02:51,872 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:02:51,872 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:02:51,872 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:02:51,872 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:02:51,872 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:02:51,872 - __main__ - INFO - ==================================================
+2025-06-09 00:02:51,881 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:02:51,886 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:02:51,886 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:03:07,705 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:03:07] "GET /api/debug/routes HTTP/1.1" 200 -
+2025-06-09 00:03:07,777 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:03:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-09 00:03:17,177 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:03:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:03:47,311 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:03:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:04:17,435 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:04:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:04:47,465 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:04:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:05:17,555 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:05:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:05:47,586 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:05:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:05:53,926 - __main__ - INFO - Chat request from 192.168.1.101: User 1 - 'test'
+2025-06-09 00:06:06,323 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:06:06] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:06:17,621 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:06:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:06:47,670 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:06:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:07:17,697 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:07:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:07:30,725 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:07:30] "GET / HTTP/1.1" 200 -
+2025-06-09 00:07:40,439 - __main__ - INFO - Response to 192.168.1.101: '<think>
+Okay, let me break this down step by step....'
+2025-06-09 00:07:40,442 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:07:40] "POST /chat HTTP/1.1" 200 -
+2025-06-09 00:07:47,735 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:07:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:08:17,761 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:08:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:08:47,795 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:08:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:09:05,062 - __main__ - INFO - ==================================================
+2025-06-09 00:09:05,062 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:09:05,062 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:09:05,063 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:09:05,063 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:09:05,063 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:09:05,063 - __main__ - INFO - ==================================================
+2025-06-09 00:09:05,086 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:09:05,095 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:09:05,095 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:09:13,565 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:09:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:09:13,588 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:09:13,588 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:09:13,588 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:09:13] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:09:13,607 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:09:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:09:13,616 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:09:13] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:09:17,860 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:09:17] "GET / HTTP/1.1" 200 -
+2025-06-09 00:09:22,719 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:09:22] "GET / HTTP/1.1" 200 -
+2025-06-09 00:09:43,642 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:09:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:10:09,892 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:10:09] "GET / HTTP/1.1" 200 -
+2025-06-09 00:10:13,670 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:10:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:10:43,707 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:10:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:10:48,447 - __main__ - INFO - Chat request: POST /chat from 192.168.1.101
+2025-06-09 00:10:48,449 - __main__ - INFO - Chat request from 192.168.1.101: User 1 - 'What is the weather in London?'
+2025-06-09 00:11:13,742 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:11:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:11:43,814 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:11:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:11:58,773 - __main__ - INFO - Response to 192.168.1.101: '<think>
+Okay, let me analyze this situation carefu...'
+2025-06-09 00:11:58,773 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:11:58] "POST /chat HTTP/1.1" 200 -
+2025-06-09 00:12:13,861 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:12:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:12:43,898 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:12:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:13:14,016 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:13:14] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:13:44,060 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:13:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:14:14,087 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:14:14] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:14:44,128 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:14:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:15:14,256 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:15:14] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:15:44,301 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:15:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:15:57,753 - __main__ - INFO - ==================================================
+2025-06-09 00:15:57,753 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:15:57,753 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:15:57,753 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:15:57,753 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:15:57,753 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:15:57,753 - __main__ - INFO - ==================================================
+2025-06-09 00:15:57,768 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:15:57,781 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:15:57,781 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:16:08,667 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:16:08] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:16:08,707 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:16:08,707 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:16:08,707 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:16:08] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:16:08,728 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:16:08] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:16:08,734 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:16:08] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:16:26,896 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:16:26] "GET / HTTP/1.1" 200 -
+2025-06-09 00:16:30,702 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:16:30] "GET / HTTP/1.1" 200 -
+2025-06-09 00:16:38,829 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:16:38] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:17:08,909 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:17:08] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:17:33,713 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:17:33] "GET / HTTP/1.1" 200 -
+2025-06-09 00:17:39,033 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:17:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:17:49,456 - __main__ - INFO - Chat request: POST /chat from 192.168.1.101
+2025-06-09 00:17:49,457 - __main__ - INFO - Chat request from 192.168.1.101: User 1 - 'test'
+2025-06-09 00:17:49,457 - __main__ - INFO - Using target client: 192.168.1.107 for function calls
+2025-06-09 00:17:49,457 - __main__ - INFO - Dispense function detected for compartment 1
+2025-06-09 00:17:49,457 - __main__ - INFO - Detected 1 function calls: ['dispense_pill']
+2025-06-09 00:18:09,195 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:18:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:18:39,229 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:18:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:19:09,266 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:19:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:19:18,626 - __main__ - INFO - Response to 192.168.1.101: '<think>
+Okay, let me think through this carefully....'
+2025-06-09 00:19:18,629 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:19:18] "POST /chat HTTP/1.1" 200 -
+2025-06-09 00:19:39,301 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:19:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:20:07,439 - __main__ - INFO - Chat request: POST /chat from 192.168.1.101
+2025-06-09 00:20:07,443 - __main__ - INFO - Chat request from 192.168.1.101: User 1 - 'What is the weather in London?'
+2025-06-09 00:20:07,444 - __main__ - INFO - Using target client: 192.168.1.107 for function calls
+2025-06-09 00:20:07,445 - __main__ - INFO - Weather function detected for city: Slot
+2025-06-09 00:20:07,445 - __main__ - INFO - Dispense function detected for compartment 1
+2025-06-09 00:20:07,445 - __main__ - INFO - Detected 2 function calls: ['get_weather_data', 'dispense_pill']
+2025-06-09 00:20:09,331 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:20:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:20:39,363 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:20:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:20:58,254 - __main__ - INFO - Response to 192.168.1.101: '<think>
+Okay, let's break this down. 
+
+The user pr...'
+2025-06-09 00:20:58,256 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:20:58] "POST /chat HTTP/1.1" 200 -
+2025-06-09 00:21:09,395 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:21:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:21:39,433 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:21:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:22:09,461 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:22:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:22:39,502 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:22:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:22:59,174 - __main__ - INFO - ==================================================
+2025-06-09 00:22:59,174 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:22:59,174 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:22:59,174 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:22:59,174 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:22:59,174 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:22:59,174 - __main__ - INFO - ==================================================
+2025-06-09 00:22:59,199 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:22:59,208 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:22:59,209 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:23:09,626 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:23:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:23:26,266 - __main__ - INFO - Chat request: POST /chat from 192.168.1.101
+2025-06-09 00:23:26,268 - __main__ - INFO - Chat request from 192.168.1.101: User 1 - 'What is the weather in Aydın?'
+2025-06-09 00:23:26,269 - __main__ - WARNING - No registered clients available for function calling
+2025-06-09 00:23:26,269 - __main__ - INFO - Extracted user message for function detection: 'What is the weather in Aydın?'
+2025-06-09 00:23:26,269 - __main__ - INFO - Weather function detected for city: Aydın
+2025-06-09 00:23:26,269 - __main__ - INFO - Detected 1 function calls: ['get_weather_data']
+2025-06-09 00:23:39,667 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:23:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:24:09,703 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:24:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:24:13,924 - __main__ - INFO - Response to 192.168.1.101: '<think>
+Okay, let me think through this carefully....'
+2025-06-09 00:24:13,926 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:24:13] "POST /chat HTTP/1.1" 200 -
+2025-06-09 00:24:39,736 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:24:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:25:09,764 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:25:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:25:10,152 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:25:10] "GET / HTTP/1.1" 200 -
+2025-06-09 00:25:11,259 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:25:11] "GET / HTTP/1.1" 200 -
+2025-06-09 00:25:11,998 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:25:11] "GET / HTTP/1.1" 200 -
+2025-06-09 00:25:12,899 - werkzeug - INFO - 192.168.1.101 - - [09/Jun/2025 00:25:12] "GET / HTTP/1.1" 200 -
+2025-06-09 00:25:29,606 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:25:29] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:25:39,798 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:25:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:26:09,836 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:26:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:26:39,868 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:26:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:27:09,895 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:27:39,924 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:27:57,819 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:27:57,838 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:27:57,839 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:27:57,839 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:57] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:27:57,865 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:27:57,867 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:27:57] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:28:05,117 - __main__ - INFO - ==================================================
+2025-06-09 00:28:05,118 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-09 00:28:05,118 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-09 00:28:05,118 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-09 00:28:05,118 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-09 00:28:05,118 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-09 00:28:05,118 - __main__ - INFO - ==================================================
+2025-06-09 00:28:05,153 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-09 00:28:05,163 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-09 00:28:05,163 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 00:28:21,911 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:28:21] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:28:27,907 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:28:27] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:28:57,942 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:28:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:29:27,970 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:29:27] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:29:57,990 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:29:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:30:16,742 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:30:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:30:16,761 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:30:16,762 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:30:16,763 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:30:16] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:30:16,784 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:30:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:30:16,786 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:30:16] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:30:46,824 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:30:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:31:16,849 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:31:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:31:46,878 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:31:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:32:16,896 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:32:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:32:46,919 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:32:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:33:16,941 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:33:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:33:44,155 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:33:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:33:44,178 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:33:44,179 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:33:44,179 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:33:44] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:33:44,199 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:33:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:33:44,204 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:33:44] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:34:14,335 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:34:14] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:34:44,355 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:34:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:35:14,372 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:14] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:35:44,397 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:44] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:35:59,524 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:35:59,553 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:35:59,553 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:35:59,553 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:59] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:35:59,572 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:35:59,579 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:35:59] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:36:12,196 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:36:12] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:36:29,595 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:36:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:36:59,719 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:36:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:37:29,803 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:37:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:37:59,825 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:37:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:38:09,550 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:38:09,569 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:38:09,569 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:38:09,569 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:09] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:38:09,592 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:38:09,603 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:09] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 00:38:27,118 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:27] "GET /api/users HTTP/1.1" 200 -
+2025-06-09 00:38:30,887 - __main__ - INFO - Chat request: POST /api/chat from 192.168.1.107
+2025-06-09 00:38:30,887 - __main__ - INFO - Chat request from 192.168.1.107: User 1 - 'ı have a headache'
+2025-06-09 00:38:30,888 - __main__ - INFO - Using target client: 192.168.1.107 for function calls
+2025-06-09 00:38:30,888 - __main__ - INFO - Extracted user message for function detection: 'ı have a headache'
+2025-06-09 00:38:30,888 - __main__ - INFO - Detected 0 function calls: []
+2025-06-09 00:38:39,769 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:38:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:39:09,805 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:39:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:39:39,829 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:39:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:40:09,872 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:40:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:40:31,964 - __main__ - INFO - Response to 192.168.1.107: '<think>
+Okay, let me think through this carefully....'
+2025-06-09 00:40:31,969 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:40:31] "POST /api/chat HTTP/1.1" 200 -
+2025-06-09 00:40:39,902 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:40:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:41:09,935 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:41:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:41:39,981 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:41:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:42:07,823 - __main__ - INFO - Chat request: POST /api/chat from 192.168.1.107
+2025-06-09 00:42:07,826 - __main__ - INFO - Chat request from 192.168.1.107: User 1 - 'dispense_slot_1'
+2025-06-09 00:42:07,827 - __main__ - INFO - Using target client: 192.168.1.107 for function calls
+2025-06-09 00:42:07,827 - __main__ - INFO - Extracted user message for function detection: 'dispense_slot_1'
+2025-06-09 00:42:07,827 - __main__ - INFO - Detected 0 function calls: []
+2025-06-09 00:42:10,011 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:42:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:42:40,038 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:42:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:43:10,116 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:43:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:43:40,209 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:43:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:44:10,321 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:44:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:44:40,354 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:44:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:45:10,386 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:45:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:45:40,427 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:45:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:46:10,453 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:46:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:46:40,485 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:46:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:47:10,517 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:47:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:47:16,613 - __main__ - INFO - Chat request: POST /api/chat from 192.168.1.107
+2025-06-09 00:47:16,615 - __main__ - INFO - Chat request from 192.168.1.107: User 1 - 'weather in aydın'
+2025-06-09 00:47:16,616 - __main__ - INFO - Using target client: 192.168.1.107 for function calls
+2025-06-09 00:47:16,616 - __main__ - INFO - Extracted user message for function detection: 'weather in aydın'
+2025-06-09 00:47:16,618 - __main__ - INFO - Weather function detected for city: Aydın
+2025-06-09 00:47:16,618 - __main__ - INFO - Detected 1 function calls: ['get_weather_data']
+2025-06-09 00:47:16,618 - __main__ - INFO - Executing 1 function calls on client 192.168.1.107
+2025-06-09 00:47:16,778 - __main__ - INFO - Function get_weather_data result: {'city': 'Aydın Province', 'country': 'TR', 'description': 'clear sky', 'feels_like': 22.77, 'humidity': 57, 'pressure': 1010, 'success': True, 'temperature': 22.93, 'timestamp': '2025-06-09T00:47:16.863127', 'units': 'metric', 'wind_speed': 1.54}
+2025-06-09 00:47:40,657 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:47:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:48:10,774 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:48:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:48:40,803 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:48:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:49:10,936 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:49:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:49:40,970 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:49:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:50:11,142 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:50:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:50:41,286 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:50:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:53:11,413 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:53:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:53:11,442 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 00:53:11,442 - __main__ - INFO - Total registered clients: 1
+2025-06-09 00:53:11,443 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:53:11] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 00:53:41,548 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:53:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:54:11,626 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:54:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:54:41,769 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:54:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:54:41,843 - __main__ - INFO - Response to 192.168.1.107: '<think>
+Okay, let me break this down carefully. Th...'
+2025-06-09 00:54:41,845 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:54:41] "POST /api/chat HTTP/1.1" 200 -
+2025-06-09 00:55:11,804 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:55:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:55:41,854 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:55:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:56:11,959 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:56:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:56:42,065 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:56:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:57:12,094 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:57:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:57:42,125 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:57:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:58:12,177 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:58:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:58:30,640 - __main__ - INFO - Response to 192.168.1.107: '<think>
+We are given a user profile and a specific...'
+2025-06-09 00:58:30,644 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:58:30] "POST /api/chat HTTP/1.1" 200 -
+2025-06-09 00:58:42,283 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:58:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:59:12,387 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:59:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 00:59:42,575 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 00:59:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:00:12,610 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:00:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:00:42,708 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:00:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:01:12,743 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:01:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:01:42,773 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:01:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:02:12,814 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:02:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:02:42,866 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:02:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:03:12,898 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:03:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:03:42,932 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:03:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:04:12,960 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:04:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:04:42,988 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:04:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:05:01,497 - __main__ - INFO - Removing inactive client: 192.168.1.107
+2025-06-09 01:05:01,497 - __main__ - INFO - Removed 1 inactive clients. 0 active clients remaining.
+2025-06-09 01:05:13,145 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:05:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:05:43,247 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:05:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:06:13,271 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:06:13] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:06:43,363 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:06:43] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:07:53,509 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:07:53] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:07:53,541 - __main__ - INFO - Client registered: 192.168.1.107 (raspberry_pi)
+2025-06-09 01:07:53,541 - __main__ - INFO - Total registered clients: 1
+2025-06-09 01:07:53,542 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:07:53] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-09 01:08:09,671 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:08:09] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-09 01:08:23,572 - werkzeug - INFO - 192.168.1.107 - - [09/Jun/2025 01:08:23] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-09 01:21:57,142 - __main__ - INFO - Removing inactive client: 192.168.1.107
+2025-06-09 01:21:57,145 - __main__ - INFO - Removed 1 inactive clients. 0 active clients remaining.
+2025-06-10 09:05:39,449 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:05:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:05:39,481 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 09:05:39,481 - __main__ - INFO - Total registered clients: 1
+2025-06-10 09:05:39,482 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:05:39] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 09:05:39,540 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:05:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:05:39,550 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:05:39] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 09:05:45,306 - __main__ - INFO - ==================================================
+2025-06-10 09:05:45,307 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 09:05:45,307 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 09:05:45,307 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 09:05:45,307 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 09:05:45,307 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 09:05:45,307 - __main__ - INFO - ==================================================
+2025-06-10 09:05:45,349 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 09:05:45,357 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 09:05:45,357 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 09:06:09,657 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:06:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:06:13,982 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:06:13] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 09:06:39,682 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:06:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:07:09,715 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:07:09] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:07:39,742 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 09:07:39] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:11:19,445 - __main__ - INFO - ==================================================
+2025-06-10 09:11:19,445 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.10.127)
+2025-06-10 09:11:19,445 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 09:11:19,445 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 09:11:19,445 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 09:11:19,445 - __main__ - INFO - Server accessible at: http://192.168.10.127:5000/
+2025-06-10 09:11:19,445 - __main__ - INFO - ==================================================
+2025-06-10 09:11:19,459 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 09:11:19,465 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.127:5000
+2025-06-10 09:11:19,465 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 09:18:36,369 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:18:36] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:18:36,395 - __main__ - INFO - Client registered: 192.168.10.184 (raspberry_pi)
+2025-06-10 09:18:36,395 - __main__ - INFO - Total registered clients: 1
+2025-06-10 09:18:36,395 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:18:36] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 09:18:36,488 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:18:36] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:18:36,491 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:18:36] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 09:18:48,245 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:18:48] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 09:19:06,550 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:19:06] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:19:36,580 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:19:36] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:20:06,623 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:20:06] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:20:36,787 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:20:36] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:21:06,815 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:06] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:21:36,850 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:36] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:21:49,286 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:49] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:21:49,308 - __main__ - INFO - Client registered: 192.168.10.184 (raspberry_pi)
+2025-06-10 09:21:49,308 - __main__ - INFO - Total registered clients: 1
+2025-06-10 09:21:49,309 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:49] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 09:21:49,342 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:49] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 09:21:49,343 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:21:49] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:22:19,377 - werkzeug - INFO - 192.168.10.184 - - [10/Jun/2025 09:22:19] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 09:36:19,455 - __main__ - INFO - Removing inactive client: 192.168.10.184
+2025-06-10 09:36:19,458 - __main__ - INFO - Removed 1 inactive clients. 0 active clients remaining.
+2025-06-10 09:42:09,791 - __main__ - INFO - ==================================================
+2025-06-10 09:42:09,791 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 09:42:09,791 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 09:42:09,791 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 09:42:09,791 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 09:42:09,791 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 09:42:09,791 - __main__ - INFO - ==================================================
+2025-06-10 09:42:09,835 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 09:42:09,842 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 09:42:09,842 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 12:45:47,889 - __main__ - INFO - ==================================================
+2025-06-10 12:45:47,889 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 12:45:47,889 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 12:45:47,889 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 12:45:47,889 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 12:45:47,889 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 12:45:47,889 - __main__ - INFO - ==================================================
+2025-06-10 12:45:47,925 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 12:45:47,932 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 12:45:47,932 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 12:46:28,826 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:28] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:46:28,861 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 12:46:28,861 - __main__ - INFO - Total registered clients: 1
+2025-06-10 12:46:28,861 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:28] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 12:46:28,907 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:28] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:46:28,916 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:28] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 12:46:38,522 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:38] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:46:58,941 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:46:58] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:47:29,008 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:47:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:47:59,042 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:47:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:48:29,081 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:48:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:48:59,119 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:48:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:49:29,218 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:49:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:49:59,254 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:49:59] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:50:29,467 - __main__ - INFO - ==================================================
+2025-06-10 12:50:29,467 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 12:50:29,467 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 12:50:29,467 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 12:50:29,467 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 12:50:29,467 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 12:50:29,468 - __main__ - INFO - ==================================================
+2025-06-10 12:50:29,526 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 12:50:29,526 - __main__ - INFO - ✅ All expected routes are registered correctly
+2025-06-10 12:50:29,636 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 12:50:29,636 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 12:50:29,637 - werkzeug - INFO -  * Restarting with stat
+2025-06-10 12:50:29,827 - __main__ - INFO - ==================================================
+2025-06-10 12:50:29,827 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 12:50:29,827 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 12:50:29,827 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 12:50:29,827 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 12:50:29,827 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 12:50:29,827 - __main__ - INFO - ==================================================
+2025-06-10 12:50:29,839 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 12:50:29,839 - __main__ - INFO - ✅ All expected routes are registered correctly
+2025-06-10 12:50:29,858 - werkzeug - WARNING -  * Debugger is active!
+2025-06-10 12:50:29,867 - werkzeug - INFO -  * Debugger PIN: 119-852-182
+2025-06-10 12:50:37,763 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:50:37] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:50:37,780 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 12:50:37,780 - __main__ - INFO - Total registered clients: 1
+2025-06-10 12:50:37,780 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:50:37] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 12:50:37,806 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:50:37] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:50:37,807 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:50:37] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 12:50:58,512 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:50:58] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:51:07,934 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:51:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:51:37,962 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:51:37] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:52:07,992 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:52:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:52:14,508 - werkzeug - INFO -  * Detected change in '/Users/ysk/Desktop/zimallmpi/serverllm.py', reloading
+2025-06-10 12:52:14,587 - werkzeug - INFO -  * Restarting with stat
+2025-06-10 12:52:15,070 - __main__ - INFO - ==================================================
+2025-06-10 12:52:15,070 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 12:52:15,070 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 12:52:15,071 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 12:52:15,071 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 12:52:15,071 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 12:52:15,071 - __main__ - INFO - ==================================================
+2025-06-10 12:52:15,184 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 12:52:38,019 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:52:38] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:53:08,044 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:53:08] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:53:38,067 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:53:38] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:54:08,153 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:54:08] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:54:38,175 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:54:38] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:55:00,070 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:55:00] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:55:00,096 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 12:55:00,096 - __main__ - INFO - Total registered clients: 1
+2025-06-10 12:55:00,097 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:55:00] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 12:55:00,116 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:55:00] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:55:00,123 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:55:00] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 12:55:30,144 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:55:30] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:56:00,179 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:56:00] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:56:30,203 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:56:30] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:57:00,230 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:00] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:57:30,280 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:30] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:57:34,488 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:34] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:57:34,506 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 12:57:34,506 - __main__ - INFO - Total registered clients: 1
+2025-06-10 12:57:34,506 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:34] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 12:57:34,530 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:34] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:57:34,531 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:34] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 12:57:51,395 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:51] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:57:52,030 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:52] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:57:53,525 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:53] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:57:53,890 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:53] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:57:54,048 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:54] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:57:54,228 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:57:54] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 12:58:04,558 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:58:04] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:58:34,593 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:58:34] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:59:04,616 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:59:04] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 12:59:34,641 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 12:59:34] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:00:07,291 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:00:07,307 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:00:07,307 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:00:07,307 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:07] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:00:07,327 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:00:07,330 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:07] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:00:08,477 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:08] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:00:08,719 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:08] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:09,368 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:09] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:12,201 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:12] "OPTIONS /api/emergency HTTP/1.1" 200 -
+2025-06-10 13:00:12,206 - __main__ - WARNING - EMERGENCY ALERT from 127.0.0.1
+2025-06-10 13:00:12,207 - __main__ - CRITICAL - EMERGENCY: {'timestamp': '2025-06-10T13:00:12.207140', 'client_ip': '127.0.0.1', 'type': 'manual_emergency_button', 'status': 'logged'}
+2025-06-10 13:00:12,239 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:12] "POST /api/emergency HTTP/1.1" 200 -
+2025-06-10 13:00:14,352 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:14] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:18,724 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:18] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:19,354 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:19] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:24,356 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:24] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:28,723 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:28] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:29,369 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:29] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:34,078 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:34] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:34,827 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:34] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:36,834 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:36] "OPTIONS /api/emergency HTTP/1.1" 200 -
+2025-06-10 13:00:36,837 - __main__ - WARNING - EMERGENCY ALERT from 127.0.0.1
+2025-06-10 13:00:36,838 - __main__ - CRITICAL - EMERGENCY: {'timestamp': '2025-06-10T13:00:36.837992', 'client_ip': '127.0.0.1', 'type': 'manual_emergency_button', 'status': 'logged'}
+2025-06-10 13:00:36,867 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:36] "POST /api/emergency HTTP/1.1" 200 -
+2025-06-10 13:00:37,372 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:00:37] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:00:39,355 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:39] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:43,722 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:43] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:44,368 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:44] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:49,354 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:49] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:54,078 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:54] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:54,711 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:54] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:00:59,718 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:00:59] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:04,079 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:04] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:04,717 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:04] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:07,483 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:01:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:01:09,710 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:09] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:14,084 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:14] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:14,743 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:14] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:19,763 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:19] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:24,074 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:24] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:24,712 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:24] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:29,704 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:29] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:32,295 - __main__ - INFO - ==================================================
+2025-06-10 13:01:32,296 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 13:01:32,296 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 13:01:32,296 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 13:01:32,296 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 13:01:32,296 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 13:01:32,296 - __main__ - INFO - ==================================================
+2025-06-10 13:01:32,307 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 13:01:32,314 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 13:01:32,314 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 13:01:34,078 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:34] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:34,082 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:34] "[35m[1mGET /api/check_pill_pickup HTTP/1.1[0m" 503 -
+2025-06-10 13:01:37,587 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:01:37] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:01:39,077 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:39] "[35m[1mGET /api/check_pill_pickup HTTP/1.1[0m" 503 -
+2025-06-10 13:01:44,078 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:44] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:01:44,081 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:44] "[35m[1mGET /api/check_pill_pickup HTTP/1.1[0m" 503 -
+2025-06-10 13:01:49,074 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:01:49] "[35m[1mGET /api/check_pill_pickup HTTP/1.1[0m" 503 -
+2025-06-10 13:02:07,617 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:07] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:02:16,397 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:02:16,414 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:02:16,414 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:02:16,415 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:16] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:02:16,438 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:02:16,442 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:16] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:02:46,472 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:02:51,768 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:02:51] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:03:16,506 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:03:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:03:46,531 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:03:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:04:02,241 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:02] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:04:02,260 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:04:02,260 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:04:02,261 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:02] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:04:02,287 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:02] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:04:02,292 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:02] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:04:16,029 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:16] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:04:29,055 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,060 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,063 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,065 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,066 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,068 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,069 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,071 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,072 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,074 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,076 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,077 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,078 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,079 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,080 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,081 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,083 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,084 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:29,717 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:29] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:30,346 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:30] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:30,977 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:30] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:31,606 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:31] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:32,236 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:32] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:32,310 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:32] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:04:32,863 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:32] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:33,490 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:33] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:34,118 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:34] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:34,751 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:34] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:35,379 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:35] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:36,010 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:36] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:36,639 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:36] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:37,271 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:37] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:37,276 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:37] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:37,917 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:37] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:38,546 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:38] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:39,175 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:39] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:39,811 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:39] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:40,443 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:40] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:41,069 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:41] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:41,701 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:41] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:42,700 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:04:42] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:04:53,927 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:04:53] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:05:02,340 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:05:02] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:05:32,373 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:05:32] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:05:46,082 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:05:46] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:05:46,712 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:05:46] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:06:02,498 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:06:02] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:06:32,605 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:06:32] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:06:46,095 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:06:46] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:06:46,109 - __main__ - ERROR - Error executing function measure_distance on client 192.168.1.102: HTTPConnectionPool(host='192.168.1.102', port=5001): Max retries exceeded with url: /distance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106406130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-06-10 13:06:46,109 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:06:46] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:07:46,084 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:07:46] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:07:46,096 - __main__ - ERROR - Error executing function measure_distance on client 192.168.1.102: HTTPConnectionPool(host='192.168.1.102', port=5001): Max retries exceeded with url: /distance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1064061f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-06-10 13:07:46,096 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:07:46] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:08:46,147 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:08:46] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:08:46,167 - __main__ - ERROR - Error executing function measure_distance on client 192.168.1.102: HTTPConnectionPool(host='192.168.1.102', port=5001): Max retries exceeded with url: /distance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105fc8ca0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-06-10 13:08:46,167 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:08:46] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:09:46,081 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:09:46] "OPTIONS /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:09:46,089 - __main__ - ERROR - Error executing function measure_distance on client 192.168.1.102: HTTPConnectionPool(host='192.168.1.102', port=5001): Max retries exceeded with url: /distance (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x105faa220>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-06-10 13:09:46,090 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 13:09:46] "GET /api/check_pill_pickup HTTP/1.1" 200 -
+2025-06-10 13:09:57,912 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:09:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:09:57,935 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:09:57,935 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:09:57,936 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:09:57] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:09:57,959 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:09:57] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:09:57,972 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:09:57] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:10:07,853 - __main__ - INFO - ==================================================
+2025-06-10 13:10:07,854 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 13:10:07,854 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 13:10:07,854 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 13:10:07,854 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 13:10:07,854 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 13:10:07,854 - __main__ - INFO - ==================================================
+2025-06-10 13:10:07,865 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 13:10:07,870 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 13:10:07,870 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 13:10:21,323 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:10:21] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:10:27,999 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:10:27] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:10:58,137 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:10:58] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:11:28,158 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:11:28] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:11:58,191 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:11:58] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:12:28,217 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:12:28] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:12:40,947 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:12:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:12:40,963 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:12:40,963 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:12:40,964 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:12:40] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:12:40,984 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:12:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:12:40,987 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:12:40] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:12:51,713 - __main__ - INFO - ==================================================
+2025-06-10 13:12:51,713 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 13:12:51,714 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 13:12:51,714 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 13:12:51,714 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 13:12:51,714 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 13:12:51,714 - __main__ - INFO - ==================================================
+2025-06-10 13:12:51,724 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 13:12:51,730 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 13:12:51,730 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 13:13:09,548 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:13:09] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:13:11,008 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:13:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:13:15,650 - werkzeug - INFO - 192.168.1.101 - - [10/Jun/2025 13:13:15] "GET / HTTP/1.1" 200 -
+2025-06-10 13:13:41,033 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:13:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:13:45,485 - werkzeug - INFO - 192.168.1.101 - - [10/Jun/2025 13:13:45] "GET / HTTP/1.1" 200 -
+2025-06-10 13:14:03,604 - __main__ - INFO - ==================================================
+2025-06-10 13:14:03,604 - __main__ - INFO - Starting Enhanced LLM server on Mac (IP: 192.168.1.101)
+2025-06-10 13:14:03,604 - __main__ - INFO - Data directory: /Users/ysk/zima_data
+2025-06-10 13:14:03,604 - __main__ - INFO - Ollama model: deepseek-r1:8b
+2025-06-10 13:14:03,604 - __main__ - INFO - Available functions: ['get_weather_data', 'rotate_servo_90_degrees', 'dispense_pill', 'measure_distance']
+2025-06-10 13:14:03,604 - __main__ - INFO - Server accessible at: http://192.168.1.101:5000/
+2025-06-10 13:14:03,604 - __main__ - INFO - ==================================================
+2025-06-10 13:14:03,616 - __main__ - INFO - Ollama setup complete. deepseek-r1:8b model is available.
+2025-06-10 13:14:03,621 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.101:5000
+2025-06-10 13:14:03,621 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 13:14:11,166 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:14:15,410 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:14:15,430 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:14:15,430 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:14:15,431 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:15] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:14:15,454 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:14:15,458 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:15] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:14:38,713 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:38] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:14:45,571 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:14:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:15:15,599 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:15:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:15:45,632 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:15:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:16:15,660 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:16:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:16:45,788 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:16:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:17:15,833 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:17:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:17:37,712 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:17:37] "GET /api/users HTTP/1.1" 200 -
+2025-06-10 13:17:45,857 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:17:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:18:15,896 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:18:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:18:45,923 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:18:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:19:15,948 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:19:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:19:45,972 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:19:45] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:20:15,996 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:20:15] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:20:46,096 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:20:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:20:51,588 - __main__ - INFO - Chat request: POST /api/chat from 192.168.1.102
+2025-06-10 13:20:51,589 - __main__ - INFO - Chat request from 192.168.1.102: User 1 - 'ı have a headache'
+2025-06-10 13:20:51,591 - __main__ - INFO - Using target client: 192.168.1.102 for function calls
+2025-06-10 13:20:51,591 - __main__ - INFO - Extracted user message for function detection: 'ı have a headache'
+2025-06-10 13:20:51,592 - __main__ - INFO - Detected 0 function calls: []
+2025-06-10 13:21:16,143 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:21:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:21:46,244 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:21:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:22:16,335 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:22:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:22:40,390 - __main__ - INFO - Response to 192.168.1.102: '<think>
+Okay, let's break this down.
+
+First, looki...'
+2025-06-10 13:22:40,392 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:22:40] "POST /api/chat HTTP/1.1" 200 -
+2025-06-10 13:22:46,377 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:22:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:23:16,426 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:23:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:23:46,466 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:23:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:24:16,662 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:24:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:24:46,697 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:24:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:25:16,770 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:25:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:25:46,804 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:25:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:26:16,838 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:26:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:26:46,885 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:26:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:27:16,927 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:27:16] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:27:46,957 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:27:46] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:28:17,090 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:28:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:28:47,115 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:28:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:29:03,604 - __main__ - INFO - Removing inactive client: 192.168.1.102
+2025-06-10 13:29:03,605 - __main__ - INFO - Removed 1 inactive clients. 0 active clients remaining.
+2025-06-10 13:29:15,488 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:29:15] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 13:29:17,140 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:29:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:29:47,162 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:29:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:30:17,189 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:30:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:30:47,217 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:30:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:31:17,244 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:31:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:31:47,327 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:31:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:32:17,354 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:32:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:32:47,379 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:32:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:33:17,406 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:33:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:33:47,434 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:33:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:34:17,470 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:34:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:34:47,494 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:34:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:35:17,541 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:35:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:35:47,568 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:35:47] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:36:17,593 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:36:17] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:38:48,678 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:38:48] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:38:48,710 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:38:48,711 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:38:48,711 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:38:48] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:39:58,813 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:39:58] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:39:58,843 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:39:58,843 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:39:58,844 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:39:58] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 13:54:29,257 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:54:29] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 13:54:29,284 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 13:54:29,285 - __main__ - INFO - Total registered clients: 1
+2025-06-10 13:54:29,285 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 13:54:29] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 14:11:40,743 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:11:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:11:40,768 - __main__ - INFO - Client registered: 192.168.1.102 (raspberry_pi)
+2025-06-10 14:11:40,768 - __main__ - INFO - Total registered clients: 1
+2025-06-10 14:11:40,769 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:11:40] "POST /api/register_client HTTP/1.1" 200 -
+2025-06-10 14:12:10,797 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:12:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:12:40,848 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:12:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:13:10,958 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:13:10] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:13:40,994 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:13:40] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:14:11,065 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:14:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:14:15,527 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:14:15] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 14:14:41,095 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:14:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:15:11,127 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:15:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:15:41,196 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:15:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:16:11,285 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:16:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:16:41,315 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:16:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:17:11,345 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:17:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:17:41,393 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:17:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:18:11,421 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:18:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:18:41,460 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:18:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:19:11,488 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:19:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:19:41,516 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:19:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:20:11,543 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:20:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:20:41,573 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:20:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:21:11,602 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:21:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:21:41,730 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:21:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:21:46,265 - __main__ - INFO - Removing inactive client: 192.168.1.102
+2025-06-10 14:21:46,265 - __main__ - INFO - Removed 1 inactive clients. 0 active clients remaining.
+2025-06-10 14:22:11,837 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:22:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:22:41,866 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:22:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:23:11,944 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:23:11] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:23:41,974 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:23:41] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:24:12,057 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:24:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:24:42,160 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:24:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:25:12,188 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:25:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:25:42,252 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:25:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:26:12,288 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:26:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:26:42,316 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:26:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:27:12,344 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:27:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:27:42,381 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:27:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:28:12,414 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:28:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:28:42,444 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:28:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:29:12,474 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:29:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:29:15,562 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:29:15] "GET /api/get_schedule HTTP/1.1" 200 -
+2025-06-10 14:29:42,604 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:29:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:30:12,688 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:30:12] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:30:42,725 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:30:42] "GET /api/heartbeat HTTP/1.1" 200 -
+2025-06-10 14:31:12,757 - werkzeug - INFO - 192.168.1.102 - - [10/Jun/2025 14:31:12] "GET /api/heartbeat HTTP/1.1" 200 -
