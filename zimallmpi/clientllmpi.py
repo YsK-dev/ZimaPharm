@@ -32,7 +32,7 @@ import asyncio
 from functools import wraps
 
 # OpenWeatherMap API configuration
-OPENWEATHER_API_KEY = "8b11d360c4cd131134626d3a72ae7459"  # Replace with your actual API key
+OPENWEATHER_API_KEY = ""  # Replace with your actual API key
 OPENWEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 DEFAULT_CITY = "London"  # Default city for weather queries
 
@@ -97,8 +97,8 @@ logger = logging.getLogger(__name__)
 LLM_SERVER_URL = "http://192.168.0.104:5000"  # always Replace with your Mac's IP address
 
 # --- IMPORTANT TELEGRAM CONFIGURATION ---
-TELEGRAM_BOT_TOKEN = "8113080355:AAGjfL08lM0aiOMa_PYUfhLDcUMSbEg8NFo"  # <<< --- !!! REPLACE THIS !!!
-TELEGRAM_CHAT_ID = "5506017420"  # <<< --- !!! REPLACE THIS !!! e.g., "@yourchannel" or a numerical ID
+TELEGRAM_BOT_TOKEN = ""  # <<< --- !!! REPLACE THIS !!!
+TELEGRAM_CHAT_ID = ""  # <<< --- !!! REPLACE THIS !!! e.g., "@yourchannel" or a numerical ID
 TELEGRAM_ENABLED = True # Initial default, will be checked/updated based on import success
 # --- END TELEGRAM CONFIGURATION ---
 
