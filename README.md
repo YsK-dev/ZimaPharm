@@ -1,4 +1,3 @@
-Of course. Here is a comprehensive `README.md` file for the project.
 
 -----
 
@@ -8,7 +7,8 @@ Zima Pharma is a proof-of-concept smart pill dispenser system that uses a locall
 
 The system consists of a central Python server that handles language processing and a client that runs on a Raspberry Pi to control the physical dispensing mechanism.
 
-![Uploading image.png…]()
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/3b0ddf57-ce53-4e86-b10b-bcf41a6a854c" />
+
 
 
 ## Features
