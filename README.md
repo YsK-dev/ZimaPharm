@@ -120,14 +120,14 @@ This is the hardware controller.
 
     ```python
     # LLM Server configuration (REPLACE WITH YOUR SERVER'S IP)
-    LLM_SERVER_URL = "http://192.168.1.104:5000"
+    LLM_SERVER_URL = "yoururl"
 
     # OpenWeatherMap API configuration (REPLACE WITH YOUR KEY)
-    OPENWEATHER_API_KEY = "8b11d360c4cd131134626d3a72ae7459"
+    OPENWEATHER_API_KEY = "youkey"
 
     # --- IMPORTANT TELEGRAM CONFIGURATION ---
-    TELEGRAM_BOT_TOKEN = "8113080355:AAGjfL08lM0aiOMa_PYUfhLDcUMSbEg8NFo"  # <<< --- !!! REPLACE THIS !!!
-    TELEGRAM_CHAT_ID = "5506017420"  # <<< --- !!! REPLACE THIS !!!
+    TELEGRAM_BOT_TOKEN = "youkey"  # <<< --- !!! REPLACE THIS !!!
+    TELEGRAM_CHAT_ID = "yours"  # <<< --- !!! REPLACE THIS !!!
     ```
 
 5.  **Run the client:**
